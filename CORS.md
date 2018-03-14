@@ -5,8 +5,9 @@
 
 <h1 id="cors">CORS</h1>
 <h2 id="overview">Overview</h2>
-<p>Browsers prevent cross origin requests as they assume the client is trying to do something malicious. This does not impact non-browsers such as postman. The allowed origins come back in the response header e.g.<br>
+<p>Mainstream browsers prevent cross origin requests as they assume the client is attempting to do something malicious. They will however allow cross origin request if the response headers say it is ok. The allowed origins come back in the response header e.g.<br>
 <code>access-control-allow-origin: http://localhost:4200</code></p>
+<p>This is something browsers comply with although desktop, mobile applications and applications like Postman do not follow this policy.</p>
 <h2 id="enabling-cors---.net-core">Enabling CORS - .net Core</h2>
 <pre><code>public void ConfigureServices(IServiceCollection services)
 {
